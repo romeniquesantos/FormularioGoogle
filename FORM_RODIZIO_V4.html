@@ -203,7 +203,7 @@
                 if (CONVENIO == "") {
                     alert("Selecione o Convênio"); return;
                 }
-                if (RODIZIO == ""){
+                if (RODIZIO == "") {
                     alert("Selecione o Rodízio"); return;
                 }
 
@@ -323,9 +323,35 @@
                     formData.append("CNPJ", registro.CNPJ);
                     formData.append("CONVENIO", registro.CONVENIO);
                     formData.append("RODIZIO", registro.RODIZIO);
+
+                    formData.append("SUBDIVISAO_RODIZIO", registro.SUBDIVISAO_RODIZIO);
+                    formData.append("DESCRICAO_SUBDIVISAO", document.getElementById(`DESCRICAO_SUBDIVISAO_${index}`).value);
+                    formData.append("TIPO_COBRANCA", document.getElementById(`TIPO_COBRANCA_${index}`).value);
+
                     formData.append("QTD_ALUNOS_MES_1", document.getElementById(`QTD_ALUNOS_MES_1_${index}`).value);
                     formData.append("HORAS_UTILIZADAS_MES_1", document.getElementById(`HORAS_UTILIZADAS_MES_1_${index}`).value);
                     formData.append("RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_1", document.getElementById(`RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_1_${index}`).value);
+
+                    formData.append("QTD_ALUNOS_MES_2", document.getElementById(`QTD_ALUNOS_MES_2_${index}`).value);
+                    formData.append("HORAS_UTILIZADAS_MES_2", document.getElementById(`HORAS_UTILIZADAS_MES_2_${index}`).value);
+                    formData.append("RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_2", document.getElementById(`RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_2_${index}`).value);
+
+                    formData.append("QTD_ALUNOS_MES_3", document.getElementById(`QTD_ALUNOS_MES_3_${index}`).value);
+                    formData.append("HORAS_UTILIZADAS_MES_3", document.getElementById(`HORAS_UTILIZADAS_MES_3_${index}`).value);
+                    formData.append("RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_3", document.getElementById(`RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_3_${index}`).value);
+
+                    formData.append("QTD_ALUNOS_MES_4", document.getElementById(`QTD_ALUNOS_MES_4_${index}`).value);
+                    formData.append("HORAS_UTILIZADAS_MES_4", document.getElementById(`HORAS_UTILIZADAS_MES_4_${index}`).value);
+                    formData.append("RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_4", document.getElementById(`RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_4_${index}`).value);
+
+                    formData.append("QTD_ALUNOS_MES_5", document.getElementById(`QTD_ALUNOS_MES_5_${index}`).value);
+                    formData.append("HORAS_UTILIZADAS_MES_5", document.getElementById(`HORAS_UTILIZADAS_MES_5_${index}`).value);
+                    formData.append("RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_5", document.getElementById(`RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_5_${index}`).value);
+
+                    formData.append("QTD_ALUNOS_MES_6", document.getElementById(`QTD_ALUNOS_MES_6_${index}`).value);
+                    formData.append("HORAS_UTILIZADAS_MES_6", document.getElementById(`HORAS_UTILIZADAS_MES_6_${index}`).value);
+                    formData.append("RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_6", document.getElementById(`RELACAO_ALUNO_PRECEPTOR_GRUPO_MES_6_${index}`).value);
+
 
                     return fetch(url, {
                         method: "POST",
